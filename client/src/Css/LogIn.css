@@ -1,3 +1,39 @@
-.LogIn {
+.logInBody {
   color: red;
+}
+
+.loginCreateContainer{
+  display:flex;
+  justify-content: center;
+}
+
+.logInContainer {
+  border: 1px solid black;
+  text-align: center;
+  width: 35%;
+  margin: 5%;
+  padding: 1%;
+}
+
+.createContainer {
+  border: 1px solid black;
+  text-align: center;
+  width: 35%;
+  margin: 5%;
+  padding: 1%;
+}
+
+input {
+  padding: 12px 0;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 2px solid transparent;
+  text-align: center;
+  width: 90%;
+  font-size: 16px;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+form .btn {
+  background-color: #1F78B4;
+  border: 2px solid #1F78B4;
 }
