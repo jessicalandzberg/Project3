@@ -1,11 +1,9 @@
 import React from 'react';
 import {Route , Switch} from "react-router-dom"
-import Home from "./Home"
+import AllCohorts from "./AllCohorts"
 import SingleCohort from "./SingleCohort"
 import UpdateStudentForm from "./UpdateStudentForm"
-
-
-
+import LogIn from "./LogIn"
 
 class Main extends React.Component {
 
@@ -21,13 +19,16 @@ class Main extends React.Component {
     return(
       <div className="Main">
         <Switch>
+          <Route path= "/allcohorts"
+          render = {() => <AllCohorts
+                          /> } />
           <Route path= "/cohort"
           render = {() => <SingleCohort
                           /> } />
           <Route path= "/edit"
           render = {() => <UpdateStudentForm
                           /> } />
-          <Route path= "/" component= {Home} />
+          <Route path= "/" component= {LogIn} />
         </Switch>
       </div>
     )
