@@ -1,11 +1,29 @@
 import React from 'react';
+import '../Css/SingleCohort.css';
 
 
 function SingleCohort() {
     return(
       <div className="SingleCohort">
-        <p> This is main- This is single cohort </p>
-        
+        <h3 className="header"> XXX Cohort </h3>
+
+        <div className="SCRow">
+
+          <div className="StudentList">
+            <h4> Student List </h4>
+            <div> Jess </div>
+            <div> JC </div>
+            <div> Tommy </div>
+            <div> Josh </div>
+          </div>
+
+          <div className="singleStudent">
+            <h4> Name </h4>
+            <div> Cohort: </div>
+            <div> Linkedin: </div>
+            <div> Fun fact: </div>
+          </div>
+        </div>
       </div>
     )
 }

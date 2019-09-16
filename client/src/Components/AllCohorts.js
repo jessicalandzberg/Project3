@@ -23,6 +23,7 @@ function AllCohorts() {
             <Link to='/cohort'>Cohort 2</Link> 
           </h3>
         </div>
+      
       </div>
     )
 }
