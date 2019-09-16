@@ -8,8 +8,8 @@ const db = new Sequelize({
   }
 });
 
-class Cohorts extends Sequelize.Model {}
-Cohorts.init({
+class Cohort extends Sequelize.Model {}
+Cohort.init({
   name: Sequelize.STRING,
   start_date: Sequelize.STRING,
   end_date: Sequelize.STRING,
@@ -20,29 +20,30 @@ Cohorts.init({
 });
 
 
-class Students extends Sequelize.Model {}
-Students.init({
+class Student extends Sequelize.Model {}
+Student.init({
   user_id: Sequelize.INTEGER,
-  cohort_id: Sequelize.INTEGER,
   name: Sequelize.STRING,
-  cohort_name: Sequelize.STRING,
   linkedin: Sequelize.STRING
 }, {
   sequelize: db,
   modelName: 'students'
 });
 
-class Users extends Sequelize.Model {}
-Users.init({
+class User extends Sequelize.Model {}
+User.init({
   student_id: Sequelize.INTEGER
 }, {
   sequelize: db,
   modelName: 'users'
 });
 
+Student.belongsTo(Cohort);
+Cohort.hasMany(Student);
+
 module.exports = {
-  Cohorts,
-  Students,
-  Users,
+  Cohort,
+  Student,
+  User,
   db,
 }
