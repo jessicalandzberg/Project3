@@ -1,0 +1,30 @@
+.header {
+  text-align: center;
+}
+
+.SCRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.StudentList {
+  width: 50%;
+  /* height: 100%; */
+  padding-right: 100px;
+  padding-left: 100px;
+  background: gray;
+}
+
+.singleStudent {
+  width: 50%;
+  /* height: 100%; */
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.SingleCohort h4 {
+  text-align: center;
+}
+
+/* need to add media query */
