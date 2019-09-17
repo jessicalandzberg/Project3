@@ -1,0 +1,22 @@
+.HomeButton {
+  position: relative;
+  border: 1px solid black;
+  width: 25%;
+  margin-left: 38%;
+  height: 30px;
+  text-align: center;
+  background: white;
+  margin-top: -2%;
+  z-index: 2;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, .2);
+}
+
+.HomeButton a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.HomeButton a:hover {
+  font-size: 22px;
+}
