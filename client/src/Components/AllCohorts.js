@@ -1,35 +1,31 @@
 import React from 'react';
-import '../Css/LogIn.css';
+import {Link} from 'react-router-dom';
+import '../Css/AllCohorts.css';
 
-
-function LogIn() {
+const AllCohorts = () => {
   return(
-    <div className="LogIn">
-
-      <div className="loginCreateContainer">
-        <div className ="logInContainer">
-          <h3>Login</h3>
-          <form className="logInForm">
-            <input type="text" placeholder="username" class="field"/>
-            <input type="password" placeholder="password" class="field"/>
-            <input type="submit" value="login" class="btn"/>       
-          </form>
+    <div className="AllCohorts">
+    
+        <div className="cohortContainer">
+          <h3 className="cohortName">
+            <Link to='/cohort/1'>Pirates</Link>
+          </h3>
         </div>
 
-        <div className ="createContainer">
-          <h3>Create User</h3>
-          <form className="createForm">
-            <input type="text" placeholder="username" class="field"/>
-            <input type="password" placeholder="password" class="field"/>
-            <input type="submit" value="login" class="btn"/>    
-            <div className="forgotPw">
-            </div>      
-          </form>
+        <div className="cohortContainer">
+          <h3 className="cohortName">
+            <Link to='/cohort/2'>Cohort 1</Link>
+          </h3>
         </div>
-      </div>  
-  
-  </div>
-  )
-}
 
-export default LogIn;
+        <div className="cohortContainer">
+          <h3 className="cohortName">
+            <Link to='/cohort/3'>Cohort 2</Link> 
+          </h3>
+        </div>
+
+      </div>
+    )
+};
+
+export default AllCohorts;
