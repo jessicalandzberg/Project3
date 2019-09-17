@@ -21,9 +21,7 @@ function LogIn() {
           <form className="createForm">
             <input type="text" placeholder="username" class="field"/>
             <input type="password" placeholder="password" class="field"/>
-            <input type="submit" value="login" class="btn"/>    
-            <div className="forgotPw">
-            </div>      
+            <input type="submit" value="create" class="btn"/>         
           </form>
         </div>
       </div>  

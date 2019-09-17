@@ -1,11 +1,11 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import '../Css/AllCohorts.css';
 
-function AllCohorts() {
-    return(
-      <div className="AllCohorts">
-
+const AllCohorts = () => {
+  return(
+    <div className="AllCohorts">
+    
         <div className="cohortContainer">
           <h3 className="cohortName">
             <Link to='/cohort/1'>Pirates</Link>
@@ -26,6 +26,6 @@ function AllCohorts() {
 
       </div>
     )
-}
+};
 
 export default AllCohorts;
