@@ -10,7 +10,7 @@ html {
 .NavComponent {
   text-align: center;
   top: 0px;
-
+  z-index: 0;
 }
 
 .Footer {
