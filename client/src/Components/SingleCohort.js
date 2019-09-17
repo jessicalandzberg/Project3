@@ -1,11 +1,13 @@
 import React from 'react';
 import '../Css/SingleCohort.css';
-
+import HomeButton from "./HomeButton"
 
 function SingleCohort(props) {
   console.log(props);
     return(
+
       <div className="SingleCohort">
+        <HomeButton />
         <h3 className="header"> XXX Cohort </h3>
 
         <div className="SCRow">
