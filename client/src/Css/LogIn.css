@@ -36,4 +36,5 @@ input {
 form .btn {
   background-color: #1F78B4;
   border: 2px solid #1F78B4;
+  width: 15%;
 }
