@@ -1,33 +1,35 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
-import '../Css/AllCohorts.css';
+import '../Css/LogIn.css';
 
-function AllCohorts() {
-    return(
-      <div className="AllCohorts">
 
-      <h1 className="cohortTitle">Choose A Cohort</h1>
-        <div AllCohortContainer>
-          <div className="cohortContainer">
-            <h3 className="cohortName"> 
-              <Link to='/cohort'>Pirates</Link> 
-            </h3>
-          </div>
+function LogIn() {
+  return(
+    <div className="LogIn">
 
-          <div className="cohortContainer">
-            <h3 className="cohortName"> 
-              <Link to='/cohort'>Cohort 1</Link> 
-            </h3>
-          </div>
-          
-          <div className="cohortContainer">
-            <h3 className="cohortName"> 
-              <Link to='/cohort'>Cohort 2</Link> 
-            </h3>
-          </div>
-      </div>
-    </div>
-    )
+      <div className="loginCreateContainer">
+        <div className ="logInContainer">
+          <h3>Login</h3>
+          <form className="logInForm">
+            <input type="text" placeholder="username" class="field"/>
+            <input type="password" placeholder="password" class="field"/>
+            <input type="submit" value="login" class="btn"/>       
+          </form>
+        </div>
+
+        <div className ="createContainer">
+          <h3>Create User</h3>
+          <form className="createForm">
+            <input type="text" placeholder="username" class="field"/>
+            <input type="password" placeholder="password" class="field"/>
+            <input type="submit" value="login" class="btn"/>    
+            <div className="forgotPw">
+            </div>      
+          </form>
+        </div>
+      </div>  
+  
+  </div>
+  )
 }
 
-export default AllCohorts;
+export default LogIn;
