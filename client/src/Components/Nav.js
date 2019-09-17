@@ -10,7 +10,7 @@ function Nav() {
           border="0" 
           alt="Home" 
           src = "http://static-assets.generalassemb.ly/logos/generalassembly-open-graph.png"
-          width="40%" 
+          width="33%" 
           height="33%"/>
       </a>
     </nav>
