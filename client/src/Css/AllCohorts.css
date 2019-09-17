@@ -1,13 +1,18 @@
-.AllCohorts {
+.AllCohortContainer {
   display: flex;
+  align-items: center;
+  width: 100%;
+
 }
 
 .cohortContainer {
   border: 1px solid black;
-  width: 25%;
-  margin: 5%;
+  width: 30%;
+  margin: 10%;
+  height: 30%;
   text-align: center;
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+
 }
 
 .cohortName {
