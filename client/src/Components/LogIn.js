@@ -10,18 +10,18 @@ function LogIn() {
         <div className ="logInContainer">
           <h3>Login</h3>
           <form className="logInForm">
-            <input type="text" placeholder="username" class="field"/>
-            <input type="password" placeholder="password" class="field"/>
-            <input type="submit" value="login" class="btn"/>       
+            <input type="text" placeholder="Username" class="field"/>
+            <input type="password" placeholder="Password" class="field"/>
+            <input type="submit" value="login" class="btn"/>
           </form>
         </div>
 
         <div className ="createContainer">
           <h3>Create User</h3>
           <form className="createForm">
-            <input type="text" placeholder="username" class="field"/>
-            <input type="password" placeholder="password" class="field"/>
-            <input type="submit" value="create" class="btn"/>         
+            <input type="text" placeholder="Username" class="field"/>
+            <input type="password" placeholder="Password" class="field"/>
+            <input type="submit" value="create" class="btn"/> 
           </form>
         </div>
       </div>  
