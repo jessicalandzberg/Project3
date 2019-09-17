@@ -2,9 +2,18 @@ const axios = require('axios');
 
 const BASE_URL = 'http://localhost:3001';
 
-export const showStudents = async () => {
+export const showCohorts = async () => {
   try {
-    const students = await axios.get(`${BASE_URL}/cohorts`);
+    const cohorts = await axios.get(`${BASE_URL}/cohorts`);
+    return cohorts.data;
+  } catch (e) {
+    console.log(e.message);
+  }
+};
+
+export const showStudents = async (cohort_id) => {
+  try {
+    const students = await axios.get(`${BASE_URL}/cohorts/${cohort_id}`);
     console.log(students.data);
     return students.data;
   } catch (e) {
@@ -12,9 +21,8 @@ export const showStudents = async () => {
   }
 };
 
-export const createStudent = async (data) => {
+export const createStudent = async (data, cohort_id) => {
   try {
-    const cohort_id = 
     const student = await axios.post(`${BASE_URL}/cohorts/${cohort_id}`, data);
     console.log(student.data);
     return student.data;

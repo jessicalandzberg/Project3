@@ -2,30 +2,24 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../Css/AllCohorts.css';
 
-const AllCohorts = () => {
+class AllCohorts extends React.Component {
+  render() {
+  console.log(this.props);
+  const AllCohorts = this.props.coh.map((d,i) => {
+      return (<div className="cohortContainer" key= {i}>
+        <h3 className="cohortName">
+          <Link to={`/cohort/${d.id}`}> {d.name} </Link>
+        </h3>
+      </div> )
+    })
   return(
     <div className="AllCohorts">
-    
-        <div className="cohortContainer">
-          <h3 className="cohortName">
-            <Link to='/cohort/1'>Pirates</Link>
-          </h3>
-        </div>
-
-        <div className="cohortContainer">
-          <h3 className="cohortName">
-            <Link to='/cohort/2'>Cohort 1</Link>
-          </h3>
-        </div>
-
-        <div className="cohortContainer">
-          <h3 className="cohortName">
-            <Link to='/cohort/3'>Cohort 2</Link> 
-          </h3>
-        </div>
-
+        {AllCohorts}
       </div>
     )
+
+}
+
 };
 
 export default AllCohorts;

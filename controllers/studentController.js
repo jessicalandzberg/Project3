@@ -3,18 +3,23 @@ const { Cohort, Student, User } = require('../models');
 
 const studentController = express.Router();
 
+
 studentController.get('/', async (req, res) => {
   try {
-    const ourcohorts = await Cohort.findAll();
-    const studentOutput= ourcohorts.map( async (cohort) => {
-      const students = await cohort.getStudents();
-      const name= cohort.name;
-      return { name, students }
-    })
-    res.json(await Promise.all(studentOutput));
+    const cohorts = await Cohort.findAll();
+    res.json(cohorts);
   } catch (e) {
     res.status(500).send(e.message);
   }
+});
+
+studentController.get('/:cohort_id', async (req, res) => {
+  const students = await Student.findAll ({
+    where: {
+      cohort_id: req.params.cohort_id
+    }
+  })
+  res.json(students);
 });
 
 studentController.post('/:cohort_id', async (req, res) => {
