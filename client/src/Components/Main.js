@@ -5,13 +5,15 @@ import SingleCohort from "./SingleCohort"
 import UpdateStudentForm from "./UpdateStudentForm"
 import LogIn from "./LogIn"
 
+import { showCohorts } from '../Services/api-helper.js'
+
 
 class Main extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      students: [],
+      cohorts: [],
       form: {
         name: '',
         linkedin: '',
@@ -21,16 +23,28 @@ class Main extends React.Component {
   }
 
 
+  getCohorts = async () => {
+    const cohorts = await showCohorts();
+    this.setState({ cohorts })
+    await console.log(this.state.cohorts);
+  };
+
+  componentDidMount() {
+    this.getCohorts();
+  }
+
+
 
   render () {
     return(
       <div className="Main">
         <Switch>
           <Route path= "/allcohorts"
-          render = {() => <AllCohorts
+          render = {(props) => <AllCohorts
+                          coh={this.state.cohorts}
                           /> } />
-          <Route path= "/cohort"
-          render = {() => <SingleCohort
+          <Route path= "/cohort/:id"
+          render = {(props) => <SingleCohort {...props}
                           /> } />
           <Route path= "/edit"
           render = {() => <UpdateStudentForm

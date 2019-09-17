@@ -2,7 +2,8 @@ import React from 'react';
 import '../Css/SingleCohort.css';
 
 
-function SingleCohort() {
+function SingleCohort(props) {
+  console.log(props);
     return(
       <div className="SingleCohort">
         <h3 className="header"> XXX Cohort </h3>
