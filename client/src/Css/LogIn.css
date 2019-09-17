@@ -3,6 +3,7 @@
 }
 
 .loginCreateContainer{
+  /* display: none; */
   display:flex;
   justify-content: center;
   background-color: gray;
@@ -20,6 +21,7 @@
 }
 
 .createContainer {
+  /* display: none; */
   border: 1px solid black;
   text-align: center;
   width: 25%;

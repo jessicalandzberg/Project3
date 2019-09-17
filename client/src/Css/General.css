@@ -26,6 +26,7 @@ html {
 .LogIn {
   /* padding-top: 50px; */
   position: 0;
+  /* min-height: calc(100vh - 40px); */
 }
 
 .AllCohorts {
