@@ -2,6 +2,7 @@ import React from 'react';
 import '../Css/SingleCohort.css';
 import { showStudents, destroyStudent } from '../Services/api-helper.js'
 
+import HomeButton from "./HomeButton"
 
 class SingleCohort extends React.Component {
 
@@ -47,7 +48,9 @@ class SingleCohort extends React.Component {
         </div>)
       })
     return(
+
       <div className="SingleCohort">
+        <HomeButton />
         <h3 className="header"> XXX Cohort </h3>
 
         <div className="SCRow">
