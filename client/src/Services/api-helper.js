@@ -31,6 +31,10 @@ export const createStudent = async (data, cohort_id) => {
   }
 };
 
+
+
+
+
 export const updateStudent = async (data, id) => {
   try {
     const student = await axios.put(`${BASE_URL}/cohorts/${id}`, data);

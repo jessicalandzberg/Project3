@@ -4,7 +4,8 @@ import AllCohorts from "./AllCohorts"
 import SingleCohort from "./SingleCohort"
 import UpdateStudentForm from "./UpdateStudentForm"
 import LogIn from "./LogIn"
-import { showCohorts } from '../Services/api-helper.js';
+
+import { showCohorts } from '../Services/api-helper.js'
 
 
 class Main extends React.Component {
@@ -21,6 +22,7 @@ class Main extends React.Component {
     }
   }
 
+
   getCohorts = async () => {
     const cohorts = await showCohorts();
     this.setState({ cohorts })
@@ -30,6 +32,7 @@ class Main extends React.Component {
   componentDidMount() {
     this.getCohorts();
   }
+
 
 
   render () {
