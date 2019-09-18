@@ -22,6 +22,17 @@ class Main extends React.Component {
     }
   }
 
+  handleChange = (e) => {
+  const { name, value } = e.target;
+  this.setState((prevState) => ({
+    form: {
+      ...prevState.form,
+      [name]: value,
+    }
+  }));
+  console.log("this is handle change", this.state.form)
+  }
+
 
   getCohorts = async () => {
     const cohorts = await showCohorts();
@@ -29,10 +40,10 @@ class Main extends React.Component {
     await console.log(this.state.cohorts);
   };
 
+
   componentDidMount() {
     this.getCohorts();
   }
-
 
 
   render () {
@@ -45,6 +56,8 @@ class Main extends React.Component {
                           /> } />
           <Route path= "/cohort/:id"
           render = {(props) => <SingleCohort {...props}
+                                form={this.state.form}
+                                handleChange={this.handleChange}
                           /> } />
           <Route path= "/edit"
           render = {() => <UpdateStudentForm
