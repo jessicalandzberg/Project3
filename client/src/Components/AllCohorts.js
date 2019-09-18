@@ -7,7 +7,8 @@ class AllCohorts extends React.Component {
   render() {
     console.log(this.props);
     const AllCohorts = this.props.coh.map((d,i) => {
-        return (<div className="cohortContainer" key= {i}>
+        return (
+          <div className="cohortContainer" key= {i}>
           <h3 className="cohortName">
             <Link to={`/cohort/${d.id}`}> {d.name} </Link>
           </h3>
@@ -16,8 +17,13 @@ class AllCohorts extends React.Component {
 
     return(
       <div className="AllCohorts">
-          {AllCohorts}
+        <div className="titleContainer">
+          <h1 className="title">All Cohorts</h1>
         </div>
+        <div className="cardContainer">
+            {AllCohorts}
+        </div>
+      </div>
       )
   }
 };
