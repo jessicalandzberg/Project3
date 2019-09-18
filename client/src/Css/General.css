@@ -1,47 +1,48 @@
 * {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Exo', sans-serif;
 }
 
 html {
   position: relative;
 }
 
+.App {
+  min-height: 100vh;
+}
+
 .NavComponent {
   text-align: center;
   top: 0px;
   z-index: 0;
-  box-shadow: 1px 2px rgba(0, 0, 0, .2);
 }
+
+/* ---reference https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ ---- */
 
 .Footer {
   text-align: center;
   background: white;
   font-size: 12px;
   width: 100%;
-  height: 40px;
+  height: 100px;
   border-top: 1px black solid;
-  position: 0;
+  bottom: 0;
+  position: absolute;
+  font-size: 40px;
 }
 
 .LogIn {
   /* padding-top: 50px; */
   position: 0;
-  min-height: calc(75vh - 40px);
-}
-
-.AllCohorts {
-  display: flex;
-  padding-top: 10%;
-  min-height: calc(100vh - 40px);
+  /* min-height: calc(100vh - 40px); */
 }
 
 .SingleCohort {
   padding-top: 50px;
-  min-height: calc(100vh - 40px);
+  min-height: calc(100vh - 100px);
 }
 
 .UpdateStudentForm {
   padding-top: 50px;
-  min-height: calc(100vh - 40px);
+  min-height: calc(100vh - 100px);
 }

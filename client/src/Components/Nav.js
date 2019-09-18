@@ -6,12 +6,15 @@ function Nav() {
   return(
     <nav className="NavComponent">
       <a href="/allcohorts">
-        <img 
-          border="0" 
-          alt="Home" 
+        <img
+          border="0"
+          alt="Home"
           src = "http://static-assets.generalassemb.ly/logos/generalassembly-open-graph.png"
-          width="25%" 
-          height="33%"/>
+          width="600px"
+          height="400px"
+          // width="25%"
+          // height="33%"
+        />
       </a>
     </nav>
   )
