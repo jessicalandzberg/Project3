@@ -1,6 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import '../Css/SingleCohort.css';
-import { showStudents, destroyStudent, createStudent } from '../Services/api-helper.js';
+import { showStudents, destroyStudent, createStudent, updateStudent } from '../Services/api-helper.js';
 import HomeButton from "./HomeButton";
 import CreateNewStudentForm from "./CreateNewStudentForm";
 
@@ -47,7 +48,8 @@ class SingleCohort extends React.Component {
   this.setState((prevState) => ({
     students: [...prevState.students, newStudent]
   }));
-}
+  }
+
 
   componentDidMount() {
     this.getStudents();
@@ -61,6 +63,7 @@ class SingleCohort extends React.Component {
         return (<div key={i}>
           <div onClick={()=>this.handleClick(d)}> {d.name} </div>
           <button onClick={() => this.deleteStudent(d.id)}>DELETE</button>
+          <button> <Link to={`/edit/${d.id}`}> EDIT </Link> </button>
         </div>)
       })
 
@@ -81,8 +84,8 @@ class SingleCohort extends React.Component {
                 form={this.props.form}
                 handleChange={this.props.handleChange}
                 handleSubmit={this.postStudent}
-              />
-              
+            />
+
           </div>
 
           <div className="singleStudent">
