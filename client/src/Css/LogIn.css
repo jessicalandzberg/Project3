@@ -3,7 +3,19 @@
 }
 
 .loginCreateContainer{
-  background: lightblue url("https://wallpaperaccess.com/full/450430.jpg") no-repeat fixed center;
+  background: lightblue url("https://wallpaperaccess.com/full/450430.jpg");
+  background-repeat: no-repeat;
+  /* min-height: 100%; */
+  /* background-attachment: fixed; */
+  background-size: cover;
+  /* background-position: center; */
+  /* height: 100%; */
+  position: fixed;
+  top: 400px;
+  left: 0;
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: calc(100vh - 240px);
 }
 
 .overlay {
@@ -11,7 +23,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 75vh;
+  height: 80vh;
 }
 
 .logInContainer {
@@ -22,6 +34,7 @@
   padding: 1%;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
   background:white;
+
 }
 
 .createContainer {
@@ -78,4 +91,5 @@ input[type=text]{
 
 .field {
   background: rgba(161, 163, 166, .2);
+
 }

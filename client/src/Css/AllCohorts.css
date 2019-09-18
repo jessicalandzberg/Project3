@@ -1,7 +1,6 @@
 /* -----entire page ------- */
 .AllCohorts {
   flex-direction: column;
-  min-height: calc(100vh - 40px);
 }
 
 /* ----title---- */
@@ -13,7 +12,7 @@
 }
 
 .AllCohorts h1 {
-
+/* ---change font here---- */
 }
 
 /* ----cohort cards----- */
@@ -29,7 +28,7 @@
   border: 1px solid black;
   width: 30%;
   margin: 5%;
-  height: 25vh;
+  height: 100px;
   text-align: center;
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
