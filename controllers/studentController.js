@@ -31,12 +31,14 @@ studentController.get('/:cohort_id', async (req, res) => {
   res.json(students);
 });
 
-studentController.post('/:cohort_id', async (req, res) => {
+studentController.post('/:cohort_id/:user_id', async (req, res) => {
   try {
     const cohort = await Cohort.findByPk(req.params.cohort_id);
     const student = await Student.create(req.body);
+    const user = await User.findByPk(req.params.user_id);
     console.log(req.body)
     await cohort.addStudent(student)
+    await user.addStudent(student)
     res.json(student);
   } catch (e) {
     res.status(500).send(e.message);

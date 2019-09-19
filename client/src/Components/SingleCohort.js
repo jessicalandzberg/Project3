@@ -43,8 +43,9 @@ class SingleCohort extends React.Component {
   postStudent = async (e) => {
     e.preventDefault();
     const data = this.props.form;
-    const cohort_id = this.props.match.params.id
-    const newStudent = await createStudent(data, cohort_id);
+    const cohort_id = this.props.match.params.id;
+    const user_id = this.props.currentUser.id;
+    const newStudent = await createStudent(data, cohort_id, user_id);
     this.setState((prevState) => ({
       students: [...prevState.students, newStudent]
     }));

@@ -22,7 +22,6 @@ Cohort.init({
 
 class Student extends Sequelize.Model {}
 Student.init({
-  user_id: Sequelize.INTEGER,
   name: Sequelize.STRING,
   linkedin: Sequelize.STRING
 }, {
@@ -32,7 +31,8 @@ Student.init({
 
 class User extends Sequelize.Model {}
 User.init({
-  student_id: Sequelize.INTEGER
+  username: Sequelize.STRING,
+  password_digest: Sequelize.STRING,
 }, {
   sequelize: db,
   modelName: 'users'
@@ -40,6 +40,9 @@ User.init({
 
 Student.belongsTo(Cohort);
 Cohort.hasMany(Student);
+
+Student.belongsTo(User);
+User.hasMany(Student);
 
 module.exports = {
   Cohort,
