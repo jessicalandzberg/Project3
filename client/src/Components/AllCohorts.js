@@ -19,9 +19,11 @@ class AllCohorts extends React.Component {
         <div className="titleContainer">
           <h1 className="title">Choose from a current SEI cohort...</h1>
         </div>
+
         <div className="cardContainer">
             {AllCohorts}
         </div>
+        
       </div>
       )
   }
