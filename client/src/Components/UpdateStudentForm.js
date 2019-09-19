@@ -28,7 +28,7 @@ class UpdateStudentForm extends React.Component {
         <p> Update the student profile! </p>
         <form className="UpdateForm" onSubmit={this.props.handleSubmit}>
           <div>
-            <label htmlFor="Name">Name: </label>
+            <label htmlFor="Name">Full Name: </label>
             <input
               id="name"
               type="text"
@@ -38,7 +38,7 @@ class UpdateStudentForm extends React.Component {
             />
           </div>
           <div>
-            <label htmlFor="user_id">user_id: </label>
+            <label htmlFor="user_id">User ID: </label>
             <input
               id="user_id"
               type="text"
@@ -48,7 +48,7 @@ class UpdateStudentForm extends React.Component {
             />
           </div>
           <div>
-            <label htmlFor="linkedin">linkedin: </label>
+            <label htmlFor="linkedin">LinkedIn: </label>
             <input
               id="linkedin"
               type="text"
