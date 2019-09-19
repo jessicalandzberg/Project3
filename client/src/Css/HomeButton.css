@@ -1,14 +1,5 @@
-/* @keyframes shadow-pulse {
-  0% {
-    box-shadow: 0 0 0 0px black;
-  }
-  100% {
-    box-shadow: 0 0 0 900px yellow;
-  }
-} */
 
 .HomeButton {
-  /* animation: shadow-pulse 2s infinite; */
   position: relative;
   border: 1px solid black;
   width: 15%;
