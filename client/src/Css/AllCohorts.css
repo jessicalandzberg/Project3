@@ -59,3 +59,12 @@
  cursor: pointer;
  font-size: 28px;
 }
+
+button {
+  margin-left: 5px;
+  transition: ease .2s
+}
+
+button:hover {
+  border: 1px solid black;
+}

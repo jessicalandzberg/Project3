@@ -1,5 +1,31 @@
+.UpdateStudentForm {
+  min-height: calc(100vh - 40px);
+  padding-top: 204px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+
 .UpdateForm {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
+}
+
+.updateTitle {
+  text-align: center;
+  font-size: 24px;
+}
+
+.submitButton {
+  cursor: pointer;
+  background: transparent;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0 auto;
+  padding: 10px 10px;
+  border: 2px solid rgba(169, 169, 169, .5);
 }
