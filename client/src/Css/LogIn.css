@@ -1,5 +1,4 @@
 .LogIn {
-  /* height: 50vh; */
   display: flex;
   align-items: center;
   background: lightblue url("https://wallpaperaccess.com/full/450430.jpg");
@@ -7,52 +6,24 @@
 }
 
 .loginCreateContainer{
-  /* background: black; */
   width: 100%;
-  /* background: lightblue url("https://wallpaperaccess.com/full/450430.jpg"); */
-  /* background-repeat: no-repeat; */
-  /* min-height: 100%; */
-  /* background-attachment: fixed; */
-  /* background-size: cover; */
-  /* background-position: center; */
-  /* height: 100%; */
-  /* position: fixed; */
-  /* top: 200px; */
-  /* left: 0; */
-  /* Preserve aspet ratio */
-  /* min-width: 100%; */
-  /* min-height: calc(100vh - 240px); */
-  /* display: flex;
-  justify-content: space-between; */
 }
 
 .overlay {
-  /* background-color: rgba(0, 0, 0, .5); */
   width: 100%;
   display: flex;
   justify-content: space-around;
-  /* height: 80vh; */
 }
 
 .logInContainer {
-  /* border: 1px solid black; */
   text-align: center;
-  /* width: 25%;
-  height: 40%;
-  margin: 5%;
-  padding: 1%; */
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
   background:white;
 
 }
 
 .createContainer {
-  /* border: 1px solid black; */
   text-align: center;
-  /* width: 25%;
-  height: 40%;
-  margin: 5%;
-  padding: 1%; */
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
   background:white;
 }
@@ -87,7 +58,6 @@ input[type=text]{
   text-transform: uppercase;
   letter-spacing: 3px;
   margin: 20px 0;
-  /* padding: 10px 30px; */
   border: 2px solid rgba(169, 169, 169, .5);
   width: 35%;
   transition: ease .5s;
