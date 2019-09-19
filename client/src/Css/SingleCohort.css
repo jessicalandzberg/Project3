@@ -8,6 +8,7 @@
 
 .SingleCohort h4 {
   text-align: center;
+  font-size: 18px;
 }
 
 .SCRow {
@@ -15,7 +16,6 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-
 }
 
 .StudentList {
@@ -24,7 +24,7 @@
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 5%;
-  padding: 100px;
+  padding: 50px;
   background: white;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
   line-height: 40px;
@@ -34,8 +34,18 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  cursor: pointer;
   border-bottom: 1px dashed black;
+  font-size: 16px;
+}
+
+.studentEntryRow>div {
+  transition: ease .2s
+}
+
+.studentEntryRow>div:hover {
+  color: #b31900;
+  font-size: 17px;
+  cursor: pointer;
 }
 
 .studentEntryRow a {
@@ -52,17 +62,28 @@
 .singleStudent {
   width: 33%;
   line-height: 40px;
-  padding: 100px;
+  padding: 50px;
   margin-left: 5%;
   margin-right: 5%;
   background: white;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
+}
 
+.singleStudent>div {
+  font-size: 17px;
+}
+
+.singleStudent>a {
+  font-size: 17px;
 }
 
 .CreateNewStudentForm {
   display: flex;
   flex-direction: column;
+}
+
+.CreateNewStudentForm>form {
+  font-size: 16px;
 }
 
 

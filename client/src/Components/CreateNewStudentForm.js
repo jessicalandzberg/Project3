@@ -11,15 +11,15 @@ const CreateNewStudentForm = (props) => {
       <h4>Create a student!</h4>
       <form onSubmit={props.handleSubmit}>
         <div>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Full Name:</label>
           <input type="text" name="name" value={props.form.name} onChange={props.handleChange} />
         </div>
         <div>
-          <label htmlFor="user_id">User id:</label>
+          <label htmlFor="user_id">User ID:</label>
           <input type="text" name="user_id" value={props.form.user_id} onChange={props.handleChange} />
         </div>
         <div>
-          <label htmlFor="linkedin">Linkedin:</label>
+          <label htmlFor="linkedin">LinkedIn:</label>
           <input type="text" name="linkedin" value={props.form.linkedin} onChange={props.handleChange} />
         </div>
         <button type="submit">Submit!</button>
