@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.SingleCohort {
+  background: url("https://res.cloudinary.com/mrtommyliang/image/upload/v1566914553/creampixels%20from%20toptal.png");
+}
+
 .SingleCohort h4 {
   text-align: center;
 }
@@ -13,26 +17,29 @@
 }
 
 .StudentList {
-  width: 50%;
-  /* height: 100%; */
+  width: 33%;
+  margin-left: 5%;
+  margin-right: 5%;
   padding-right: 100px;
   padding-left: 100px;
   background: gray;
 }
 
-    .studentEntryRow {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      border-bottom: .5px black dashed
-    }
+.studentEntryRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: .5px black dashed
+}
 
 
 .singleStudent {
-  width: 50%;
-  /* height: 100%; */
+  width: 33%;
+  border: 1px solid black;
   padding-right: 100px;
   padding-left: 100px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .CreateNewStudentForm {

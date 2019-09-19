@@ -2,6 +2,9 @@
 .AllCohorts {
   display: flex;
   flex-direction: column;
+  background: url("https://res.cloudinary.com/mrtommyliang/image/upload/v1566914553/creampixels%20from%20toptal.png");
+  /* background-repeat: no-repeat;
+ background-size: cover; */
 }
 
 /* ----title---- */
@@ -13,11 +16,11 @@
 }
 
 .AllCohorts h1 {
-/* ---change font here---- */
+  color: black;
+  /* text-shadow: 2px 2px grey; */
 }
 
 /* ----cohort cards----- */
-
 .cardContainer {
   display: flex;
   justify-content: space-around;
@@ -28,12 +31,14 @@
 .cohortContainer {
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
   border: 1px solid black;
-  width: 30%;
+  width: 20%;
   margin: 5%;
-  height: 100px;
+  height: 20%;
+  /* height: 100px; */
   text-align: center;
   justify-content: center;
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  /* background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); */
+  background: white;
 }
 
 .cohortName {
@@ -41,6 +46,7 @@
   position: relative;
   top: 28%;
 }
+
 .cohortName a {
   text-decoration: none;
   color: black;
