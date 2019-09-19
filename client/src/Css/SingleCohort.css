@@ -14,38 +14,57 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: center;
+
 }
 
 .StudentList {
   width: 33%;
+  height: 50%;
   margin-left: 5%;
   margin-right: 5%;
-  padding-right: 100px;
-  padding-left: 100px;
-  background: gray;
+  margin-bottom: 5%;
+  padding: 100px;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
+  line-height: 40px;
 }
 
 .studentEntryRow {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: .5px black dashed
+  cursor: pointer;
+  border-bottom: 1px dashed black;
+}
+
+.studentEntryRow a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.studentEntryRow button {
+  cursor: pointer;
 }
 
 
 .singleStudent {
   width: 33%;
-  border: 1px solid black;
-  padding-right: 100px;
-  padding-left: 100px;
+  line-height: 40px;
+  padding: 100px;
   margin-left: 5%;
   margin-right: 5%;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
+
 }
 
 .CreateNewStudentForm {
   display: flex;
   flex-direction: column;
 }
+
 
 
 /* need to add media query */
