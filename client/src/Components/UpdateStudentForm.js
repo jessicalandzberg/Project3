@@ -1,16 +1,15 @@
 import React from 'react';
 import { showStudent } from '../Services/api-helper.js'
 
-//we need to add onSubmit, value for each input, onChange for each input
 
 class UpdateStudentForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      editStudent: [],
     }
   }
 
+  //get the 1 student that has teh same id as the url
   getStudent = async () => {
     const student_id = this.props.match.params.id;
     const student = await showStudent(student_id);
@@ -22,10 +21,9 @@ class UpdateStudentForm extends React.Component {
   }
 
   render() {
-    console.log('this is props form', this.props.form)
     return(
       <div className="UpdateStudentForm">
-        <p> This is main - this is update student form </p>
+        <p> Update the student profile! </p>
         <form onSubmit={this.props.handleSubmit}>
           <label htmlFor="Name">Name: </label>
           <input
@@ -51,7 +49,14 @@ class UpdateStudentForm extends React.Component {
             value={this.props.form.linkedin}
             onChange={this.props.handleChange}
           />
-          <button type="submit">Update</button>
+          <button
+            type="submit"
+            onClick = {function(){
+              window.alert('your student profile was updated');
+              window.location = '/allcohorts'
+            }}
+            >
+            Update </button>
         </form>
       </div>
     )

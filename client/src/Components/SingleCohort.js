@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import '../Css/SingleCohort.css';
-import { showStudents, destroyStudent, createStudent, updateStudent } from '../Services/api-helper.js';
+import { showStudents, destroyStudent, createStudent } from '../Services/api-helper.js';
 import HomeButton from "./HomeButton";
 import CreateNewStudentForm from "./CreateNewStudentForm";
 
@@ -41,13 +41,14 @@ class SingleCohort extends React.Component {
 
   //adds new student and adds to state of students
   postStudent = async (e) => {
-  e.preventDefault();
-  const data = this.props.form;
-  const cohort_id = this.props.match.params.id
-  const newStudent = await createStudent(data, cohort_id);
-  this.setState((prevState) => ({
-    students: [...prevState.students, newStudent]
-  }));
+    e.preventDefault();
+    const data = this.props.form;
+    const cohort_id = this.props.match.params.id
+    const newStudent = await createStudent(data, cohort_id);
+    this.setState((prevState) => ({
+      students: [...prevState.students, newStudent]
+    }));
+    await this.props.setFormBlank()
   }
 
 

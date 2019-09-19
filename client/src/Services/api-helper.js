@@ -14,7 +14,6 @@ export const showCohorts = async () => {
 export const showStudents = async (cohort_id) => {
   try {
     const students = await axios.get(`${BASE_URL}/cohorts/${cohort_id}`);
-    console.log(students.data);
     return students.data;
   } catch (e) {
     console.log(e.message);

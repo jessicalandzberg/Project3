@@ -5,7 +5,6 @@ import '../Css/AllCohorts.css';
 class AllCohorts extends React.Component {
 
   render() {
-    console.log(this.props);
     const AllCohorts = this.props.coh.map((d,i) => {
         return (<div className="cohortContainer" key= {i}>
           <h3 className="cohortName">
