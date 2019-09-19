@@ -86,6 +86,10 @@
   font-size: 16px;
 }
 
+.CreateNewStudentInput {
+  width: 100% !important;
+}
+
 .NewStudentFormButton {
   cursor: pointer;
   background: transparent;

@@ -11,12 +11,27 @@ const CreateNewStudentForm = (props) => {
       <h4>Create a student!</h4>
       <form className= 'NewStudentForm' onSubmit={props.handleSubmit}>
           <label htmlFor="name">Full Name:</label>
-          <input type="text" name="name" value={props.form.name} onChange={props.handleChange} />
+            <input
+            className="CreateNewStudentInput" 
+            type="text" 
+            name="name" 
+            value={props.form.name} 
+            onChange={props.handleChange} />
           <label htmlFor="user_id">User ID:</label>
-          <input type="text" name="user_id" value={props.form.user_id} onChange={props.handleChange} />
+            <input
+            className="CreateNewStudentInput" 
+            type="text" 
+            name="user_id" 
+            value={props.form.user_id} 
+            onChange={props.handleChange} />
           <label htmlFor="linkedin">LinkedIn:</label>
-          <input type="text" name="linkedin" value={props.form.linkedin} onChange={props.handleChange} />
-          <button className="NewStudentFormButton" type="submit">Submit!</button>
+            <input
+            className="CreateNewStudentInput" 
+            type="text" 
+            name="linkedin" 
+            value={props.form.linkedin} 
+            onChange={props.handleChange} />
+          <button className="NewStudentFormButton" type="submit">Submit</button>
       </form>
     </div>
   )
