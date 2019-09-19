@@ -30,6 +30,7 @@ class UpdateStudentForm extends React.Component {
           <div>
             <label htmlFor="Name">Full Name: </label>
             <input
+              className = "inputBox"
               id="name"
               type="text"
               name="name"
@@ -40,6 +41,7 @@ class UpdateStudentForm extends React.Component {
           <div>
             <label htmlFor="user_id">User ID: </label>
             <input
+              className="inputBox"
               id="user_id"
               type="text"
               name="user_id"
@@ -50,6 +52,7 @@ class UpdateStudentForm extends React.Component {
           <div>
             <label htmlFor="linkedin">LinkedIn: </label>
             <input
+              className = "inputBox"
               id="linkedin"
               type="text"
               name="linkedin"
