@@ -74,9 +74,19 @@ html {
 .UpdateStudentForm {
   /* padding-top: 50px; */
   /* position: 0; */
-  /* min-height: calc(100vh - 40px); */
   min-height: calc(100vh - 40px);
+  /* width: 30%; */
   padding-top: 204px;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5%;
+  /* border: 1px solid black; */
+}
+
+.UpdateStudentForm p {
+  text-align: center;
   font-size: 24px;
 }
 
