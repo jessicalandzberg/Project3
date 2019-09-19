@@ -5,7 +5,7 @@ function HomeButton() {
     return(
       <div className="HomeButton">
         <a href="/AllCohorts">
-          Back to all cohorts
+          All cohorts
         </a>
       </div>
     )
