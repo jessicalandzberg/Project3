@@ -11,7 +11,7 @@ function LogIn(props) {
         <div className="overlay">
 
         <div className ="createContainer">
-          <h3>Log in or create new account</h3>
+          <h3>Login or Create an account</h3>
           <form className="createForm">
             <input placeholder="Username" name= "username" type="text" value={props.formData.username} onChange={props.handleChange} className="field"/>
             <input placeholder="Password" name= 'password' type="password" value={props.formData.password} onChange={props.handleChange} className="field"/>

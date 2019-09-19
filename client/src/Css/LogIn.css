@@ -1,7 +1,9 @@
 .LogIn {
   display: flex;
   align-items: center;
-  background: lightblue url("https://wallpaperaccess.com/full/450430.jpg");
+  background: url("https://wallpaperaccess.com/full/450430.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 
 }
 
@@ -29,14 +31,14 @@
 }
 
 input {
-  padding: 12px 0;
-  margin: 10px;
-  border-radius: 3px;
-  border: 2px solid transparent;
-  text-align: center;
-  width: 90%;
-  font-size: 16px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+  padding: 12px 0 !important;
+  margin: 10px !important;
+  border-radius: 3px !important;
+  border: 2px solid transparent !important;
+  text-align: center !important;
+  width: 90% !important;
+  font-size: 16px !important;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2) !important;
 }
 input[type=text]{
   display: inline-block;
@@ -57,10 +59,11 @@ input[type=text]{
   font-family: sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin: 20px 0;
+  margin: 10px 0 15px 20px;
   border: 2px solid rgba(169, 169, 169, .5);
   width: 35%;
   transition: ease .5s;
+  padding: 7px;
 }
 
 .btn:hover {
@@ -69,7 +72,7 @@ input[type=text]{
   cursor: pointer;
 }
 
-.field {
-  background: rgba(161, 163, 166, .2);
-
+.btn>a {
+  text-decoration: none;
+  color: black;
 }

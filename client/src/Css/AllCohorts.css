@@ -61,3 +61,17 @@ button {
 button:hover {
   border: 1px solid black;
 }
+
+@media only screen and (max-width:768px) {
+  .cohortContainer {
+    width: 90%;
+  }
+
+  .cardContainer {
+    flex-direction: column;
+  }
+
+  .AllCohorts h1 {
+   font-size: 18px;
+  }
+}
