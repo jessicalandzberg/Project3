@@ -39,17 +39,6 @@ class UpdateStudentForm extends React.Component {
             />
           </div>
           <div>
-            <label htmlFor="user_id">User ID: </label>
-            <input
-              className="inputBox"
-              id="user_id"
-              type="text"
-              name="user_id"
-              value={this.props.form.user_id}
-              onChange={this.props.handleChange}
-            />
-          </div>
-          <div>
             <label htmlFor="linkedin">LinkedIn: </label>
             <input
               className = "inputBox"
@@ -57,6 +46,28 @@ class UpdateStudentForm extends React.Component {
               type="text"
               name="linkedin"
               value={this.props.form.linkedin}
+              onChange={this.props.handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="hobbies">Hobbies: </label>
+            <input
+              className = "inputBox"
+              id="hobbies"
+              type="text"
+              name="hobbies"
+              value={this.props.form.hobbies}
+              onChange={this.props.handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="previousExperience">Previous Experience: </label>
+            <input
+              className = "inputBox"
+              id="previousExperience"
+              type="text"
+              name="previousExperience"
+              value={this.props.form.previousExperience}
               onChange={this.props.handleChange}
             />
           </div>

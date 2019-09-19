@@ -18,7 +18,9 @@ class Main extends React.Component {
       form: {
         name: '',
         linkedin: '',
-        user_id: ''
+        user_id: '',
+        previousExperience: "",
+        hobbies: "",
       },
       authFormData: {
         username: "",
@@ -45,8 +47,9 @@ class Main extends React.Component {
       form: {
         name: student.name,
         linkedin: student.linkedin,
-        user_id: student.user_id,
         id: student.id,
+        hobbies: student.hobbies,
+        previousExperience: student.previousExperience
       }
   }))
   }
@@ -57,8 +60,9 @@ class Main extends React.Component {
       form: {
         name: "",
         linkedin: "",
-        user_id: "",
         id: "",
+        hobbies: "",
+        previousExperience: ""
       }
   }))
   }
@@ -79,8 +83,9 @@ class Main extends React.Component {
       form: {
         name: "",
         linkedin: "",
-        user_id: "",
         id: "",
+        hobbies: "",
+        previousExperience: ""
       }
     }))
   }

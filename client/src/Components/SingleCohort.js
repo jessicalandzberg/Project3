@@ -94,7 +94,8 @@ class SingleCohort extends React.Component {
 
           <div className="singleStudent">
             <h4> Name: {this.state.activeStudent.name} </h4>
-            <div> Cohort ID: {this.state.activeStudent.cohortId} </div>
+            <div> Hobbies: {this.state.activeStudent.hobbies} </div>
+            <div> Previous Experience: {this.state.activeStudent.previousExperience} </div>
             <a target='_blank' href={this.state.activeStudent.linkedin}> LinkedIn Profile </a>
           </div>
         </div>
