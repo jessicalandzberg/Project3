@@ -90,6 +90,14 @@
   width: 100% !important;
 }
 
+.Hobbies {
+  width: 100% !important;
+}
+
+.previousExperience {
+    width: 100% !important;
+}
+
 .NewStudentFormButton {
   cursor: pointer;
   background: transparent;
