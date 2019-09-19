@@ -25,7 +25,7 @@ class UpdateStudentForm extends React.Component {
   render() {
     return(
       <div className="UpdateStudentForm">
-        <p> Update the student profile! </p>
+        <p className="updateTitle"> Update your profile! </p>
         <form className="UpdateForm" onSubmit={this.props.handleSubmit}>
           <div>
             <label htmlFor="Name">Full Name: </label>
@@ -58,9 +58,10 @@ class UpdateStudentForm extends React.Component {
             />
           </div>
           <button
+            className="submitButton"
             type="submit"
             onClick = {function(){
-              window.alert('your student profile was updated');
+              window.alert('Your student profile has been updated!');
               window.location = '/allcohorts'
             }}
             >
