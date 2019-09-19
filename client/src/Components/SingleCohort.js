@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import '../Css/SingleCohort.css';
 import { showStudents, destroyStudent, createStudent } from '../Services/api-helper.js';
 import HomeButton from "./HomeButton";
@@ -40,14 +41,16 @@ class SingleCohort extends React.Component {
 
   //adds new student and adds to state of students
   postStudent = async (e) => {
-  e.preventDefault();
-  const data = this.props.form;
-  const cohort_id = this.props.match.params.id
-  const newStudent = await createStudent(data, cohort_id);
-  this.setState((prevState) => ({
-    students: [...prevState.students, newStudent]
-  }));
-}
+    e.preventDefault();
+    const data = this.props.form;
+    const cohort_id = this.props.match.params.id
+    const newStudent = await createStudent(data, cohort_id);
+    this.setState((prevState) => ({
+      students: [...prevState.students, newStudent]
+    }));
+    await this.props.setFormBlank()
+  }
+
 
   componentDidMount() {
     this.getStudents();
@@ -61,6 +64,7 @@ class SingleCohort extends React.Component {
         return (<div key={i}>
           <div onClick={()=>this.handleClick(d)}> {d.name} </div>
           <button onClick={() => this.deleteStudent(d.id)}>DELETE</button>
+          <button> <Link to={`/edit/${d.id}`}> EDIT </Link> </button>
         </div>)
       })
 
@@ -81,8 +85,8 @@ class SingleCohort extends React.Component {
                 form={this.props.form}
                 handleChange={this.props.handleChange}
                 handleSubmit={this.postStudent}
-              />
-              
+            />
+
           </div>
 
           <div className="singleStudent">

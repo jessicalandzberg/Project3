@@ -14,12 +14,21 @@ export const showCohorts = async () => {
 export const showStudents = async (cohort_id) => {
   try {
     const students = await axios.get(`${BASE_URL}/cohorts/${cohort_id}`);
-    console.log(students.data);
     return students.data;
   } catch (e) {
     console.log(e.message);
   }
 };
+
+export const showStudent = async (student_id) => {
+  try {
+    const student = await axios.get(`${BASE_URL}/cohorts/students/${student_id}`);
+    return student.data;
+  } catch (e) {
+    console.log(e.message);
+  }
+};
+
 
 export const createStudent = async (data, cohort_id) => {
   try {

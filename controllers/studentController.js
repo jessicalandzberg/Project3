@@ -13,6 +13,15 @@ studentController.get('/', async (req, res) => {
   }
 });
 
+studentController.get('/students/:student_id', async (req, res) => {
+  const student = await Student.findOne ({
+    where: {
+      id: req.params.student_id
+    }
+  })
+  res.json(student);
+});
+
 studentController.get('/:cohort_id', async (req, res) => {
   const students = await Student.findAll ({
     where: {

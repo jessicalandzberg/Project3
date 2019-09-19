@@ -1,34 +1,66 @@
 import React from 'react';
+import { showStudent } from '../Services/api-helper.js'
 
-//we need to add onSubmit, value for each input, onChange for each input
 
-function UpdateStudentForm() {
+class UpdateStudentForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    }
+  }
+
+  //get the 1 student that has teh same id as the url
+  getStudent = async () => {
+    const student_id = this.props.match.params.id;
+    const student = await showStudent(student_id);
+    this.props.test(student);
+  }
+
+  componentDidMount() {
+    this.getStudent()
+  }
+
+  render() {
     return(
       <div className="UpdateStudentForm">
-        <p> This is main - this is update student form </p>
-        <form>
+        <p> Update the student profile! </p>
+        <form onSubmit={this.props.handleSubmit}>
           <label htmlFor="Name">Name: </label>
           <input
             id="name"
             type="text"
             name="name"
+            value={this.props.form.name}
+            onChange={this.props.handleChange}
           />
-          <label htmlFor="cohort">Cohort: </label>
+          <label htmlFor="user_id">user_id: </label>
           <input
-            id="cohort"
+            id="user_id"
             type="text"
-            name="cohort"
+            name="user_id"
+            value={this.props.form.user_id}
+            onChange={this.props.handleChange}
           />
-          <label htmlFor="input3">Input3: </label>
+          <label htmlFor="linkedin">linkedin: </label>
           <input
-            id="input3"
+            id="linkedin"
             type="text"
-            name="input3"
+            name="linkedin"
+            value={this.props.form.linkedin}
+            onChange={this.props.handleChange}
           />
-          <button type="submit">Submit</button>
+          <button
+            type="submit"
+            onClick = {function(){
+              window.alert('your student profile was updated');
+              window.location = '/allcohorts'
+            }}
+            >
+            Update </button>
         </form>
       </div>
     )
+  }
 }
 
 export default UpdateStudentForm;
