@@ -5,7 +5,7 @@ import SingleCohort from "./SingleCohort"
 import UpdateStudentForm from "./UpdateStudentForm"
 import LogIn from "./LogIn"
 
-import { showCohorts, updateStudent} from '../Services/api-helper.js'
+import { showCohorts, updateStudent, registerUser, loginUser } from '../Services/api-helper.js'
 
 
 class Main extends React.Component {
@@ -13,12 +13,17 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      currentUser: null,
       cohorts: [],
       form: {
         name: '',
         linkedin: '',
         user_id: ''
-      }
+      },
+      authFormData: {
+        username: "",
+        password: ""
+      },
     }
   }
 
@@ -80,6 +85,52 @@ class Main extends React.Component {
     }))
   }
 
+  // Function to register a user
+  // After register, we just call the login function with the same data
+  handleRegister = async (e) => {
+    e.preventDefault();
+    await registerUser(this.state.authFormData);
+    this.handleLogin();
+    await console.log('this is handleRegister')
+
+  }
+
+
+  // Function to login a user
+  // we set the user data in state and the JWT in local storage
+  handleLogin = async (e) => {
+    const userData = await loginUser(this.state.authFormData);
+    this.setState({
+      currentUser: userData.user
+    })
+    localStorage.setItem("jwt", userData.token)
+    await console.log('this is handleLogin', this.state.currentUser)
+    // this.props.history.push('/allcohorts')
+  }
+
+  handleLogout = () => {
+  localStorage.removeItem("jwt");
+  this.setState({
+    currentUser: null
+  })
+  }
+
+
+  // Handle change function for the auth forms
+  authHandleChange = async (e) => {
+    const { name, value } = e.target;
+    this.setState(prevState => ({
+      authFormData: {
+        ...prevState.authFormData,
+        [name]: value
+      }
+    }));
+    await console.log ("this is handlechange", this.state.authFormData)
+  }
+
+
+
+
   componentDidMount() {
     this.getCohorts();
   }
@@ -99,6 +150,7 @@ class Main extends React.Component {
                                 form={this.state.form}
                                 handleChange={this.handleChange}
                                 setFormBlank = {this.setFormBlank}
+                                currentUser = {this.state.currentUser}
                           /> } />
 
           <Route path= "/edit/:id"
@@ -109,7 +161,13 @@ class Main extends React.Component {
                                 handleSubmit={this.updateStudent}
                           /> } />
 
-          <Route path= "/" component= {LogIn} />
+          <Route path= "/"
+          render = {(props) => <LogIn {...props}
+                                handleLogin={this.handleLogin}
+                                handleRegister={this.handleRegister}
+                                handleChange={this.authHandleChange}
+                                formData={this.state.authFormData}
+                          /> } />
         </Switch>
       </div>
     )
