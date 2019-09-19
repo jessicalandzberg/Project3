@@ -24,8 +24,6 @@ html {
   z-index: 1;
 }
 
-/* ---reference https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ ---- */
-
 .Footer {
   /* text-align: center;
   background: white;
@@ -81,7 +79,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 5%;
+  /* margin: 5%; */
   /* border: 1px solid black; */
 }
 
