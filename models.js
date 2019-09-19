@@ -23,7 +23,9 @@ Cohort.init({
 class Student extends Sequelize.Model {}
 Student.init({
   name: Sequelize.STRING,
-  linkedin: Sequelize.STRING
+  linkedin: Sequelize.STRING,
+  hobbies: Sequelize.STRING,
+  previousExperience: Sequelize.STRING
 }, {
   sequelize: db,
   modelName: 'students'
