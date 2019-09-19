@@ -1,5 +1,7 @@
 import React from 'react';
 import { showStudent } from '../Services/api-helper.js'
+import '../Css/updateStudentForm.css';
+
 
 
 class UpdateStudentForm extends React.Component {
@@ -24,31 +26,37 @@ class UpdateStudentForm extends React.Component {
     return(
       <div className="UpdateStudentForm">
         <p> Update the student profile! </p>
-        <form onSubmit={this.props.handleSubmit}>
-          <label htmlFor="Name">Name: </label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            value={this.props.form.name}
-            onChange={this.props.handleChange}
-          />
-          <label htmlFor="user_id">user_id: </label>
-          <input
-            id="user_id"
-            type="text"
-            name="user_id"
-            value={this.props.form.user_id}
-            onChange={this.props.handleChange}
-          />
-          <label htmlFor="linkedin">linkedin: </label>
-          <input
-            id="linkedin"
-            type="text"
-            name="linkedin"
-            value={this.props.form.linkedin}
-            onChange={this.props.handleChange}
-          />
+        <form className="UpdateForm" onSubmit={this.props.handleSubmit}>
+          <div>
+            <label htmlFor="Name">Name: </label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              value={this.props.form.name}
+              onChange={this.props.handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="user_id">user_id: </label>
+            <input
+              id="user_id"
+              type="text"
+              name="user_id"
+              value={this.props.form.user_id}
+              onChange={this.props.handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="linkedin">linkedin: </label>
+            <input
+              id="linkedin"
+              type="text"
+              name="linkedin"
+              value={this.props.form.linkedin}
+              onChange={this.props.handleChange}
+            />
+          </div>
           <button
             type="submit"
             onClick = {function(){

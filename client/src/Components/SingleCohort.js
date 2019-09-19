@@ -61,10 +61,12 @@ class SingleCohort extends React.Component {
 
     //maps through the state of students and renders a clickable name and a row with a delete button an
     const AllStudents = this.state.students.map((d,i) => {
-        return (<div key={i}>
+        return (<div key={i} className="studentEntryRow">
           <div onClick={()=>this.handleClick(d)}> {d.name} </div>
-          <button onClick={() => this.deleteStudent(d.id)}>DELETE</button>
-          <button> <Link to={`/edit/${d.id}`}> EDIT </Link> </button>
+          <div className="buttons">
+            <button onClick={() => this.deleteStudent(d.id)}>DELETE</button>
+            <button> <Link to={`/edit/${d.id}`}> EDIT </Link> </button>
+          </div>
         </div>)
       })
 
@@ -77,7 +79,7 @@ class SingleCohort extends React.Component {
         <div className="SCRow">
 
           <div className="StudentList">
-            <h4> Student List </h4>
+            <h4> Student List: </h4>
 
             {AllStudents}
 

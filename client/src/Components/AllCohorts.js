@@ -17,7 +17,7 @@ class AllCohorts extends React.Component {
     return(
       <div className="AllCohorts">
         <div className="titleContainer">
-          <h1 className="title">All Cohorts</h1>
+          <h1 className="title">Choose from a current SEI cohort...</h1>
         </div>
         <div className="cardContainer">
             {AllCohorts}

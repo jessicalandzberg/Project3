@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.SingleCohort h4 {
+  text-align: center;
+}
+
 .SCRow {
   display: flex;
   flex-direction: row;
@@ -16,6 +20,14 @@
   background: gray;
 }
 
+    .studentEntryRow {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: .5px black dashed
+    }
+
+
 .singleStudent {
   width: 50%;
   /* height: 100%; */
@@ -23,8 +35,10 @@
   padding-left: 100px;
 }
 
-.SingleCohort h4 {
-  text-align: center;
+.CreateNewStudentForm {
+  display: flex;
+  flex-direction: column;
 }
+
 
 /* need to add media query */
