@@ -76,3 +76,12 @@ input[type=text]{
   text-decoration: none;
   color: black;
 }
+@media only screen and (max-width:768px) {
+  .createContainer {
+    width: 80%;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
