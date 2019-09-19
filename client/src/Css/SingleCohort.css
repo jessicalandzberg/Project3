@@ -102,3 +102,21 @@
   padding: 10px 10px;
   border: 2px solid rgba(169, 169, 169, .5);
 }
+
+@media only screen and (max-width:768px) {
+  .SCRow {
+    flex-direction: column;
+  }
+  .StudentList {
+    width: 91%;
+  }
+
+  .NewStudentFormButton {
+    margin: 0 auto;
+  }
+
+  .singleStudent {
+    width: 91%;
+    margin-bottom: 5%;
+  }
+}
