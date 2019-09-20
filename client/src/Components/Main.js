@@ -110,7 +110,7 @@ class Main extends React.Component {
     })
     localStorage.setItem("jwt", userData.token)
     await console.log('this is handleLogin', this.state.currentUser)
-    // this.props.history.push('/allcohorts')
+    this.props.setLoggedInUser(this.state.currentUser);
   }
 
   handleLogout = () => {
@@ -133,16 +133,16 @@ class Main extends React.Component {
     await console.log ("this is handlechange", this.state.authFormData)
   }
 
-
-
-
   componentDidMount() {
     this.getCohorts();
-  }
+  };
+
+
 
   render () {
     return(
       <div className="Main">
+        {renderUser()}
         <Switch>
 
           <Route path= "/allcohorts"

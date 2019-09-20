@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../Css/HomeButton.css'
 
 function HomeButton() {
     return(
       <div className="HomeButton">
-        <a href="/AllCohorts">
+        <Link to= "/AllCohorts">
           All cohorts
-        </a>
+        </Link>
       </div>
     )
 }
