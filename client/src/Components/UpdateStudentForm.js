@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { showStudent } from '../Services/api-helper.js'
 import '../Css/updateStudentForm.css';
 
@@ -74,12 +75,12 @@ class UpdateStudentForm extends React.Component {
           <button
             className="submitButton"
             type="submit"
-            onClick = {function(){
+            onClick = {() => {
               window.alert('Your student profile has been updated!');
               window.location = '/allcohorts'
             }}
             >
-            Update </button>
+            Update</button>
         </form>
       </div>
     )

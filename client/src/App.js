@@ -6,18 +6,32 @@ import Nav from "./Components/Nav"
 import Footer from "./Components/Footer"
 
 
+
 class App extends Component{
   constructor(props) {
     super(props);
     this.state= {
-      test: []
+      test: [],
+      loggedInUser: {
+        username: '',
+        id: ''
     }
   }
+}
+  setLoggedInUser = async (user) => {
+    this.setState((prevState) => ({
+      loggedInUser: {
+        username: user.username,
+        id: user.id
+      }
+  }))
+  }
+
   render() {
     return (
       <div className= "App">
-      <Nav />
-      <Main />
+      <Nav loggedInUser= {this.state.loggedInUser} />
+      <Main setLoggedInUser= {this.setLoggedInUser} />
       <Footer />
       </div>
     )
