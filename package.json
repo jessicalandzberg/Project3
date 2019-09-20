@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "12.6.0"
+  },
   "scripts": {
     "db:create": "dropdb --if-exists -e GASei_db && createdb -e GASei_db",
     "db:reset": "node resetDb.js",
     "db:seed": "node seed.js",
     "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
