@@ -19,7 +19,8 @@ const seed = async () => {
 
     const student4= await Student.create({
       name: 'Eloise Barrow',
-      linkedin: 'https://www.linkedin.com/in/eloisebarrow/'
+      linkedin: 'https://www.linkedin.com/in/eloisebarrow/',
+      hobbies: 'Rescue Baby Seals'
     })
 
    const student5= await Student.create({
@@ -34,7 +35,9 @@ const seed = async () => {
 
     const student7= await Student.create({
       name: 'Joshua Dyer',
-      linkedin: 'https://www.linkedin.com/in/joshua-dyer-a629a190/'
+      linkedin: 'https://www.linkedin.com/in/joshua-dyer-a629a190/',
+      previousExperience: 'Operations Supervisor',
+      hobbies: 'Video games and memes'
     })
 
     const student8= await Student.create({
@@ -43,7 +46,8 @@ const seed = async () => {
     })
    const student9= await Student.create({
       name: 'Tommy Liang',
-      linkedin: 'https://www.linkedin.com/in/mrtommyliang/'
+      linkedin: 'https://www.linkedin.com/in/mrtommyliang/',
+      previousExperience: 'Freight Forwarder'
     })
 
     const student10= await Student.create({
@@ -58,7 +62,8 @@ const seed = async () => {
 
     const student12= await Student.create({
       name: 'J.C. Dorr',
-      linkedin: 'https://www.linkedin.com/in/john-dorr/'
+      linkedin: 'https://www.linkedin.com/in/john-dorr/',
+      previousExperience: 'Aircraft Technician'
     })
 
     const cohort1= await Cohort.create({
