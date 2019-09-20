@@ -75,7 +75,6 @@ class SingleCohort extends React.Component {
 
       <div className="SingleCohort">
         <HomeButton />
-        <h3 className="header"> XXX Cohort </h3>
 
         <div className="SCRow">
 
